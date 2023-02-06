@@ -11,6 +11,11 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     expose:
       - "3306"
 
