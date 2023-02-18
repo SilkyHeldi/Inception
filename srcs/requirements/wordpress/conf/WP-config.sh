@@ -12,4 +12,12 @@ if [ ! -d /run/php ]; then
     mkdir ./run/php
 fi
 
+chmod 766 /var/www/wordpress/wp-config.php
+chmod 766 /var/www/wordpress/.htaccess
+chmod -R 766 /var/www/wordpress/wp-content/uploads
+
+chown -R www-data:www-data /var/www/wordpress/wp-content/uploads
+chown www-data:www-data /var/www/wordpress/wp-config.php
+chown -R www-data:www-data /var/www/wordpress/.htaccess
+
 /usr/sbin/php-fpm7.3 -F
