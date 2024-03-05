@@ -8,8 +8,9 @@ RUN apt-get -y install wget
 
 RUN apt-get install -y php7.3 php-fpm php-mysql mariadb-client
 
-RUN wget https://fr.wordpress.org/wordpress-6.0-fr_FR.tar.gz -P /var/www
-RUN cd /var/www && tar -xzf wordpress-6.0-fr_FR.tar.gz && rm wordpress-6.0-fr_FR.tar.gz
+# RUN wget https://fr.wordpress.org/latest-fr_FR.tar.gz -P /var/www
+
+# RUN cd /var/www && tar -xzf latest-fr_FR.tar.gz && rm latest-fr_FR.tar.gz
 
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 RUN chmod +x wp-cli.phar

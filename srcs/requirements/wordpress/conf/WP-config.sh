@@ -2,7 +2,11 @@
 sleep 10
 
 # Download the latest WordPress files
-# wp core download --allow-root
+wp core download --allow-root --path=/var/www/wordpress
+wp cli update
+wp core update
+
+
 
 wp config create	--dbname=$SQL_DATABASE --dbuser=$SQL_USER --dbpass=$SQL_PASSWORD --dbhost=mariadb:3306 --path='/var/www/wordpress' --allow-root
 wp core install     --url=$DOMAIN_NAME --title=$SITE_TITLE --admin_user=$ADMIN_USER --admin_password=$ADMIN_PASSWORD --admin_email=$ADMIN_EMAIL --allow-root --path='/var/www/wordpress'
