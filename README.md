@@ -1,5 +1,3 @@
-# Instructions
-
 ## What is Inception ?
 Inception is a 42 School project that introduces us to containers with Docker and Docker-compose.
 
