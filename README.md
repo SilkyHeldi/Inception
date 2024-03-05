@@ -18,4 +18,5 @@ Inception is a 42 School project that introduces us to containers with Docker an
 You are going to encounter a warning "Warning: Potential Security Risk Ahead", click on "advanced" and continue.
 It is perfectly normal since the site is self-signed (not officially recognized).
 
-NOTE : the .env here is pushed for testing, otherwise you should NEVER publish your .env as it could contain sensitive information about your application !!
+>[!NOTE]
+>The .env here is pushed for testing, otherwise you should NEVER publish your .env as it could >contain sensitive information about your application !!
